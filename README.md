@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# `SkillUp AI-Chatbot V2`
 
-## Getting Started
+**Description**  
+SkillUp AI adalah asisten karir berbasis artificial intelligence yang membantu pengguna dalam pengembangan skill profesional, persiapan kerja, dan percepatan pertumbuhan karir melalui teknologi conversational AI.
 
-First, run the development server:
+- Demokratisasi Akses Bimbingan Karir - Menyediakan guidance karir berkualitas untuk semua kalangan secara gratis
+- Optimasi Proses Pencarian Kerja - Meningkatkan keberhasilan job hunting melalui CV optimization dan interview preparation
+- Pengembangan Skill Berbasis Data - Personalisasi rekomendasi pengembangan kompetensi berdasarkan tren industri terkini
+
+## 🧑‍💻 Team
+
+| **Name**                         | **Role**     |
+| -------------------------------- | ------------ |
+| Muhammad Gavin Arasyi            | Frontend Dev |
+| Muhammad Fadhillah Arasyi        | Frontend Dev |
+| Muhammad Raihan                  | Frontend Dev |
+| Muhammad Ilham Fazari Winatapura | Frontend Dev |
+
+## 🚀 Features
+
+- **🤖 AI Career Assistant**: Chatbot AI yang dapat menjawab pertanyaan seputar pengembangan skill, tips karir, dan informasi industri kerja dengan respons intelligent dan kontekstual.
+- **📊 Skill Analysis & Development**: Analisis kemampuan pengguna dan identifikasi skill gap berdasarkan target industri yang diinginkan dan Rekomendasi pengembangan skill yang disesuaikan dengan kebutuhan pasar kerja terkini.
+- **💼 Interview Preparation**: Latihan wawancara dengan AI recruiter yang dapat menyesuaikan peran dan industri, Umpan balik instan terhadap jawaban dan performa selama sesi wawancara, dan Bank pertanyaan wawancara lengkap mencakup behavioral dan technical questions.
+- **🎯 Career Guidance**: Panduan pengembangan karir yang disesuaikan dengan tujuan dan latar belakang pengguna, Informasi terkini tentang tren industri, skill yang dibutuhkan, dan peluang karir, dan Tips dan strategi efektif untuk mencari kerja dan membangun personal branding.
+- **🔧 Technical Capabilities**: Teknologi AI mutakhir dari Google Gemini untuk respons yang natural dan intelligent, Kemampuan memproses permintaan dan memberikan respons secara real-time, dan Arsitektur yang dapat dikembangkan untuk menambah fitur dan kapasitas pengguna.
+- **📊 Adaptive Ipsum Levels**: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+- **🌐 User Experience**: Sistem chat yang memahami konteks percakapan dan history interaksi, dan Akses cepat ke fitur utama melalui button dan shortcut yang intuitif.
+
+## 🛠 Tech Stack
+
+**Frontend:**
+
+- Next.js
+- TailwindCSS
+- Javascript
+- Google Generative-AI
+
+**Backend:**
+
+- Next.js API Routes
+- Google Gemini API (via SDK atau REST)
+
+## 🚀 How to Run the Project
+
+### Step 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/NamkuGavin/skillup-chatbot-v2.git
+cd skillup-chatbot-v2
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Step 2. Package JSON & Dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+package.json
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```json
+{
+  "name": "skillup-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "@google/generative-ai": "^0.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1"
+  }
+}
+```
 
-## Learn More
+### Step 3 Instruksi Menjalankan Aplikasi
 
-To learn more about Next.js, take a look at the following resources:
+Install Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install
+npm run dev
+```
