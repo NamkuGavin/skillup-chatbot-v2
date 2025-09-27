@@ -4,7 +4,7 @@
 SkillUp AI adalah asisten karir berbasis artificial intelligence yang membantu pengguna dalam pengembangan skill profesional, persiapan kerja, dan percepatan pertumbuhan karir melalui teknologi conversational AI.
 
 - Demokratisasi Akses Bimbingan Karir - Menyediakan guidance karir berkualitas untuk semua kalangan secara gratis
-- Optimasi Proses Pencarian Kerja - Meningkatkan keberhasilan job hunting melalui CV optimization dan interview preparation
+- Optimasi Proses Pencarian Kerja - Meningkatkan keberhasilan job hunting melalui interview preparation
 - Pengembangan Skill Berbasis Data - Personalisasi rekomendasi pengembangan kompetensi berdasarkan tren industri terkini
 
 ## 🧑‍💻 Team
