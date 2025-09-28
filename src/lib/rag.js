@@ -520,12 +520,10 @@ export class CareerRAGSystem {
     this.interviewQuestions = interviewQuestions;
   }
 
-  // Search career information
   searchCareerInfo(query) {
     const results = [];
     const queryLower = query.toLowerCase();
 
-    // Search in industry data
     this.careerData.industries.forEach((industry) => {
       if (
         industry.name.toLowerCase().includes(queryLower) ||
@@ -541,7 +539,6 @@ export class CareerRAGSystem {
       }
     });
 
-    // Search in job market data
     this.careerData.jobMarket.trendingSkills.forEach((skill) => {
       if (skill.name.toLowerCase().includes(queryLower)) {
         results.push({
@@ -555,34 +552,6 @@ export class CareerRAGSystem {
     return results.sort((a, b) => b.relevance - a.relevance).slice(0, 3);
   }
 
-  // Get interview preparation materials
-  getInterviewPrep(role = "general", industry = "general") {
-    const roleData =
-      this.interviewQuestions.roles[role] ||
-      this.interviewQuestions.roles.recruiter;
-    const industryData =
-      this.interviewQuestions.industrySpecific[industry] || [];
-
-    return {
-      roleQuestions: roleData.questions || [],
-      industryQuestions: industryData,
-      preparationTips: {
-        before: [
-          "Research perusahaan",
-          "Review job description",
-          "Practice dengan STAR method",
-        ],
-        during: [
-          "Datang tepat waktu",
-          "Maintain eye contact",
-          "Jawab dengan confident",
-        ],
-        after: ["Send thank-you email", "Follow up jika perlu"],
-      },
-    };
-  }
-
-  // Get career development resources - METHOD YANG DITAMBAHKAN
   getCareerDevelopmentResources() {
     return {
       skillDevelopment: {

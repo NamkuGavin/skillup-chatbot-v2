@@ -1,4 +1,3 @@
-// Data contoh untuk prototype
 const INDUSTRY_DATA = {
   tech: [
     "Programming",
@@ -24,11 +23,6 @@ const INDUSTRY_DATA = {
 };
 
 export class SkillUpTools {
-  constructor() {
-    // Inisialisasi jika diperlukan
-  }
-
-  // Tool 1: Analisis Skill untuk Industri
   analyzeIndustrySkills(industry) {
     const skills = INDUSTRY_DATA[industry.toLowerCase()] || [
       "Communication",
@@ -49,7 +43,6 @@ export class SkillUpTools {
     };
   }
 
-  // Tool 3: Generator Pertanyaan Wawancara
   generateInterviewQuestions(role, experienceLevel = "mid") {
     const questions = {
       recruiter: [
@@ -68,55 +61,5 @@ export class SkillUpTools {
     };
 
     return questions[role] || questions["recruiter"];
-  }
-
-  getImprovementTips(targetJob) {
-    const tips = {
-      tech: [
-        "Sertifikasi teknis",
-        "Portfolio project GitHub",
-        "Contribusi open source",
-      ],
-      marketing: [
-        "Case study hasil campaign",
-        "Sertifikasi Google Analytics",
-        "Portfolio konten",
-      ],
-      finance: [
-        "Sertifikasi CFA/CPA",
-        "Analisis kasus keuangan",
-        "Pengalaman software akuntansi",
-      ],
-    };
-
-    return (
-      tips[targetJob] || [
-        "Networking profesional",
-        "Continuous learning",
-        "Soft skill development",
-      ]
-    );
-  }
-
-  getSTARExamples(element) {
-    const examples = {
-      situation: [
-        "Di perusahaan X dengan tim 5 orang...",
-        "Pada project migrasi sistem...",
-      ],
-      task: [
-        "Bertanggung jawab meningkatkan konversi...",
-        "Tugas utama mengoptimalkan proses...",
-      ],
-      action: [
-        "Mengimplementasikan sistem baru...",
-        "Berkolaborasi dengan tim untuk...",
-      ],
-      result: [
-        "Meningkatkan efisiensi 25%...",
-        "Mengurangi biaya operasional 15%...",
-      ],
-    };
-    return examples[element] || [];
   }
 }

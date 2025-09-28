@@ -18,7 +18,6 @@ export async function POST(request) {
     const agent = new SkillUpAgent();
     let response;
 
-    // Handle specific features based on context
     if (context.currentFeature) {
       switch (context.currentFeature) {
         case "interview_practice":

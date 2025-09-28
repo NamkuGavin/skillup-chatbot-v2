@@ -13,7 +13,6 @@ export class SkillUpAgent {
     try {
       this.updateContext("user", userMessage);
 
-      // Deteksi intent pengguna dengan keyword matching sederhana
       const intent = this.detectIntent(userMessage);
       console.log("Detected intent:", intent);
 
@@ -43,7 +42,6 @@ export class SkillUpAgent {
   detectIntent(message) {
     const lowerMessage = message.toLowerCase();
 
-    // Prioritaskan berdasarkan context currentFeature jika ada
     if (
       lowerMessage.includes("skill") ||
       lowerMessage.includes("kemampuan") ||
@@ -78,7 +76,6 @@ export class SkillUpAgent {
 
   async handleSkillAnalysis(message) {
     try {
-      // Extract industry from message
       const industries = [
         "tech",
         "marketing",
@@ -92,10 +89,7 @@ export class SkillUpAgent {
       );
       const industry = foundIndustry || "tech";
 
-      // Use tool to analyze skills
       const analysis = this.tools.analyzeIndustrySkills(industry);
-
-      // Enhance with RAG data
       const ragResults = this.rag.searchCareerInfo(industry);
 
       const prompt = `Anda adalah asisten karir SkillUp. Berikan analisis skill untuk industri ${industry} berdasarkan data berikut:
@@ -126,7 +120,6 @@ Berikan respons yang praktis dan actionable. Fokus pada skills yang paling high-
       const role = context.role || "recruiter";
       const industry = context.industry || "technology";
 
-      // Get interview questions
       const questions = this.tools.generateInterviewQuestions(role);
       const currentQuestionIndex = context.questionIndex || 0;
       const currentQuestion =
@@ -147,7 +140,6 @@ Format:
 - **Saran:** [Tips perbaikan]  
 - **Pertanyaan Selanjutnya:** [Pertanyaan baru]`;
 
-      // Update context
       context.questionIndex = currentQuestionIndex + 1;
 
       return await generateResponse(message, prompt);
@@ -159,9 +151,8 @@ Format:
 
   async handleCareerAdvice(message) {
     try {
-      // Get career data
       const ragResults = this.rag.searchCareerInfo(message);
-      const developmentResources = this.rag.getCareerDevelopmentResources(); // SEKARANG SUDAH ADA
+      const developmentResources = this.rag.getCareerDevelopmentResources();
 
       const prompt = `Anda adalah mentor karir SkillUp. Berikan advice pengembangan karir:
 
